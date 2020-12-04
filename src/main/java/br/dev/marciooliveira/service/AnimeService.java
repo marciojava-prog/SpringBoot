@@ -9,9 +9,7 @@ import br.dev.marciooliveira.requests.AnimePutRequestBody;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -41,7 +39,7 @@ public class AnimeService {
 
     public Anime save(AnimePostRequestBody animePostRequestBody) {
 
-       return animeRepository.save(AnimeMapper.INSTANCE.toAnime(animePostRequestBody));
+        return animeRepository.save(AnimeMapper.INSTANCE.toAnime(animePostRequestBody));
     }
 
     public void delete(long id) {
